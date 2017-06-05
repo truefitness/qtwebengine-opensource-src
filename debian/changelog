@@ -1,0 +1,78 @@
+qtwebengine-opensource-src (5.7.1+dfsg-6.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Build with -g1 instead of -g on 32bit architectures.
+    (Closes: #863927)
+
+ -- Adrian Bunk <bunk@debian.org>  Mon, 05 Jun 2017 16:16:54 +0300
+
+qtwebengine-opensource-src (5.7.1+dfsg-6) unstable; urgency=medium
+
+  [ Sandro Knauß ]
+  * Make it buildable on small archs again.
+
+ -- Sandro Knauß <hefee@debian.org>  Wed, 18 Jan 2017 19:08:01 +0100
+
+qtwebengine-opensource-src (5.7.1+dfsg-5) unstable; urgency=medium
+
+  [ Sandro Knauß ]
+  * Fix "h.264 video does not seem to work" (Closes: #851170)
+    - Add use_proprietary_codecs to defines, to be able to use ffmpeg and h264
+  * Add -Wl,-z,now to LFAGS, to make build full hardened
+  * Add Build-Deps ninja-build
+  * make build be less ram consuming on armhf and mipsel
+
+ -- Sandro Knauß <hefee@debian.org>  Wed, 18 Jan 2017 13:04:01 +0100
+
+qtwebengine-opensource-src (5.7.1+dfsg-4) unstable; urgency=medium
+
+  [ Sandro Knauß ]
+  * Move QtWebEngineProcess to libqt5webenginecore5
+  * Make arch+indep build sucessfull too.
+  * Mark gold compiler symbols as optional
+
+ -- Sandro Knauß <hefee@debian.org>  Wed, 11 Jan 2017 13:16:55 +0100
+
+qtwebengine-opensource-src (5.7.1+dfsg-3) unstable; urgency=medium
+
+  * Make arch=all build successfully (Closes: #849794)
+  * Release to unstable, to get bugs fixed.
+
+ -- Sandro Knauß <hefee@debian.org>  Sun, 08 Jan 2017 20:53:35 +0100
+
+qtwebengine-opensource-src (5.7.1+dfsg-2) experimental; urgency=medium
+
+  * Fix "bad VCS links in debian/control" (Closes: #849301)
+  * Fix "References to QtWebEngineWidgets is missing in dev package" (Closes: #849993)
+  * Add patch to get mips support.
+  * Do not build no debug symbols for any arch, because they use too much RAM on
+    porterboxes.
+  * Make ld not cache the symbol tables of input files in memory to
+    avoid memory exhaustion during the linking phase.
+  * Disable debug symbols build and push this info to gyp.
+  * Bump symbols from pre 5.7.1 to 5.7.1.
+  * Add symbols from i386.
+
+ -- Sandro Knauß <hefee@debian.org>  Wed, 04 Jan 2017 15:36:09 +0100
+
+qtwebengine-opensource-src (5.7.1+dfsg-1) unstable; urgency=medium
+
+  [ Sandro Knauß ]
+  * New upstream release.
+  * Release to unstable, because all other Qt modules are now in unstable.
+  * Change depends of qtwebengine5-dev to correct name of
+    libqtwebchannel2-dev
+  * Add patch to use current system re2 package.
+  * Remove minified javascript files and replace them with self constucted
+    files.
+  * Update source/linitian-overrides
+  * Update copyright file.
+
+ -- Sandro Knauß <hefee@debian.org>  Sat, 24 Dec 2016 03:15:08 +0100
+
+qtwebengine-opensource-src (5.7.1~20161021+dfsg-1) experimental; urgency=medium
+
+  * Initial package (Closes: #832420)
+  * Team upload.
+
+ -- Sandro Knauß <hefee@debian.org>  Mon, 31 Oct 2016 16:35:20 +0100
