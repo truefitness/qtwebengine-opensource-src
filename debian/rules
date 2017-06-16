@@ -51,7 +51,8 @@ defines+=use_system_expat=1 \
          use_system_xdg_utils=1 \
          use_system_yasm=1 \
          use_system_zlib=1 \
-         use_system_protobuf
+         use_system_protobuf \
+	 use_proprietary_codecs
          # use_system_libxnvctrl=1 \
          # use_system_sqlite=1 \
          # use_system_libvpx=1 \
